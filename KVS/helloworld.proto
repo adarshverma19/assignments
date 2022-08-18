@@ -1,0 +1,48 @@
+syntax =  "proto3";
+package helloworld;
+service Greeter{
+    rpc PUT(PutRequest) returns (PutReply){}
+    rpc GET(GetRequest) returns (GetReply){}
+    rpc DEL(DelRequest) returns (DelReply){}
+    rpc CON(ConRequest) returns (ConReply){}
+}
+
+message PutRequest{
+    string putKey=1;
+    string putValue=2;
+    int32 contoken=3;
+}
+
+message PutReply{
+    int32 putErrorCode=1;
+    string putError=2;
+}
+
+message GetRequest{
+    string getKey=1;
+    int32 contoken=2;
+}
+
+message GetReply{
+    string getValue=1;
+    int32 getErrorCode=2;
+    string getError=3;
+}
+
+message DelRequest{
+    string delKey=1;
+    int32 contoken=2;
+}
+
+message DelReply{
+    int32 delErrorCode=1;
+    string delError=2;
+}
+
+message ConRequest{
+
+}
+
+message ConReply{
+    int32 contoken=1;
+}

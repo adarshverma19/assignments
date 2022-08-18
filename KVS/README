@@ -1,0 +1,37 @@
+# KEY VALUE SERVER
+(Adarsh Verma : 213050075 , Jatin Lachhwani : 21q050005 , Tanmay Joshi : 213050018)
+
+##Sample Configfile
+50051	: Listening
+1	: 1 means LRU cache , 2 mean LFU cache
+4	: cache capacity
+10	: threadpoolsize    
+
+## Method to build AND run the project
+untar the 213050075-21q050005-213050018.tar.gz file
+then Run the following commands in that folder
+
+$ mkdir -p cmake/build
+$ pushd cmake/build
+$ cmake ../..
+
+### This will create the necessary makefiles to build the project 
+###  Now to create the server and crient : use make command: 
+$ make
+
+### In order to use the server use : 
+./greeter_async_server
+
+### In order to use the client use :
+./greeter_async_client
+
+Now you can run the client in Interactive or Batch mode and use the Key Value Server.
+
+
+## References
+https://grpc.io/docs/languages/cpp/quickstart/
+https://giters.com/grpc/grpc/issues/27089
+https://stackoverflow.com/questions/41732884/grpc-multiple-services-in-cpp-async-server
+https://leetcode.com/problems/lfu-cache/
+https://www.youtube.com/watch?v=0PSB9y8ehbk&t=1s&ab_channel=takeUforward
+https://youtu.be/mzqHlAW7jeE
